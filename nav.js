@@ -200,3 +200,9 @@ if (navHost) {
         }
     });
 }
+
+if (!document.querySelector('script[src="/fx.js"]')) {
+    const fx = document.createElement('script');
+    fx.src = '/fx.js';
+    document.body.appendChild(fx);
+}
