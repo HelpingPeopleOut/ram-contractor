@@ -41,34 +41,32 @@ const menuContent = `
 const footerContent = `
     <footer class="site-footer" id="site-footer">
         <div class="wrap footer-grid">
-            <div>
+            <div class="footer-identity">
                 <img class="footer-logo" src="/logo.png" alt="RAM General Construction">
-                <p>Pasadena’s contractor for historic restorations, luxury ADUs, and high-end residential remodeling across the San Gabriel Valley.</p>
-                <p><a href="tel:+16266394749">(626) 639-4749</a><br><a href="mailto:info@ram-contractor.com">info@ram-contractor.com</a><br>Mon–Sat, 8:00 AM – 5:00 PM</p>
+                <p class="footer-name">RAM Construction</p>
+                <p class="footer-role">General contractor in Pasadena.</p>
+                <p class="footer-areas">Pasadena, San Marino, Altadena, East Pasadena, South Pasadena, and the San Gabriel Valley.</p>
             </div>
-            <div>
-                <h3>Work</h3>
-                <ul>
-                    <li><a href="/services.html">Remodeling</a></li>
-                    <li><a href="/services.html">Historic restoration</a></li>
-                    <li><a href="/services.html">ADU builds</a></li>
-                    <li><a href="/services.html">Outdoor living</a></li>
-                    <li><a href="/portfolio.html">Selected projects</a></li>
-                </ul>
+            <div class="footer-contact">
+                <h2 class="footer-label">Contact</h2>
+                <a class="footer-phone" href="tel:+16266394749">(626) 639-4749</a>
+                <a class="footer-mail" href="mailto:info@ram-contractor.com">info@ram-contractor.com</a>
+                <p class="footer-hours">Mon–Sat 8:00 AM–5:00 PM</p>
             </div>
-            <div>
-                <h3>Visit</h3>
+            <nav class="footer-nav" aria-label="Footer">
+                <h2 class="footer-label">Pages</h2>
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/services.html">Services</a></li>
                     <li><a href="/portfolio.html">Portfolio</a></li>
-                    <li><a href="/contact.html#inquiry-form">Request an estimate</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="tel:+16266394749">Call (626) 639-4749</a></li>
                     <li><a href="https://g.co/kgs/sjeJGdg" target="_blank" rel="noopener">Google profile</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
         <div class="wrap legal">
-            <span>© 2026 RAM Construction. Licensed & insured. Pasadena, CA.</span>
+            <span>© 2026 RAM Construction. Pasadena.</span>
             <span>Site by <a href="https://www.hpo.center" target="_blank" rel="noopener">HPO.Center</a></span>
         </div>
     </footer>
@@ -88,7 +86,6 @@ const navStyles = `
     .ram-brand { display: flex; align-items: center; text-decoration: none; }
     .ram-brand__logo { height: 62px; width: auto; display: block; }
     .ram-mobile-menu__logo { height: 42px; width: auto; display: block; }
-    .footer-logo { height: 88px; width: auto; display: block; margin: 0 0 0.85rem; }
     .ram-desktop-links { display: none; align-items: center; gap: 1.4rem; }
     .ram-desktop-links a { color: #eef3f8; text-decoration: none; font-size: 0.95rem; font-weight: 650; }
     .ram-desktop-links a:hover, .ram-desktop-links a.is-current { color: #e2b340; }
@@ -120,7 +117,6 @@ const navStyles = `
     }
     @media (max-width: 720px) {
         .ram-brand__logo { height: 52px; }
-        .footer-logo { height: 72px; }
     }
     .ram-menu-close { font-size: 1.7rem; }
     .ram-mobile-menu__links {
