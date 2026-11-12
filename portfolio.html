@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Builder Portfolio | RAM Construction Pasadena</title>
+    
+    <meta name="description" content="View the luxury remodeling, structural engineering, and historic restoration portfolio of RAM Construction in Pasadena, CA.">
+    
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="mask-icon" href="/icon.svg" color="#D9A404">
+
+    <meta property="og:title" content="RAM Construction | Pasadena Master Builders" />
+    <meta property="og:description" content="Pasadena's premier licensed general contractor. Specialized in high-end structural engineering, luxury remodeling, and faithful historic restoration." />
+    <meta property="og:image" content="https://gallery.ram-contractor.com/First%20Gallery%20-%20html/BAB2086D-AEFB-44A7-B5A0-750AFC35F82D.JPG" />
+    <meta property="og:url" content="https://www.ram-contractor.com/portfolio.html" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RAM Construction | Pasadena Master Builders" />
+    <meta name="twitter:description" content="Pasadena's premier licensed general contractor. Specialized in high-end structural engineering, luxury remodeling, and faithful historic restoration." />
+    <meta name="twitter:image" content="https://gallery.ram-contractor.com/First%20Gallery%20-%20html/BAB2086D-AEFB-44A7-B5A0-750AFC35F82D.JPG" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://gallery.ram-contractor.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Teko:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ram: { navy: '#0A2342', dark: '#051121', gold: '#D9A404', lightGold: '#FFD700' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Teko', 'sans-serif'] },
+                    boxShadow: {
+                        'glow': '0 0 25px rgba(217, 164, 4, 0.15)',
+                        'glow-strong': '0 0 40px rgba(217, 164, 4, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .reveal-up { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal-up.active { opacity: 1; transform: translateY(0); }
+        
+        /* High-End Masonry Grid */
+        .masonry-grid { columns: 1; gap: 1.5rem; }
+        @media (min-width: 768px) { .masonry-grid { columns: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { columns: 3; } }
+        
+        .gallery-card { break-inside: avoid; margin-bottom: 1.5rem; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .gallery-card:hover { transform: scale(1.02); z-index: 10; box-shadow: 0 0 30px rgba(217, 164, 4, 0.2); border-color: rgba(217, 164, 4, 0.5); }
+
+        /* Lightbox */
+        #lightbox { display: none; background: rgba(5, 17, 33, 0.98); backdrop-filter: blur(10px); }
+        
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-ram-dark text-white font-sans antialiased overflow-x-hidden min-h-screen flex flex-col">
+
+    <div class="fixed inset-0 bg-noise opacity-40 pointer-events-none z-0"></div>
+
+    <div id="global-nav"></div>
+    <script src="nav.js"></script>
+
+    <header class="relative pt-48 pb-16 text-center container mx-auto px-6 z-10">
+        <div class="reveal-up inline-block mb-4 border border-ram-gold/20 bg-ram-gold/5 px-6 py-2 rounded-full">
+            <span class="text-ram-gold text-xs font-bold tracking-[0.2em] uppercase">Visual Excellence</span>
+        </div>
+        <h1 class="reveal-up text-6xl md:text-8xl font-heading font-bold uppercase tracking-tighter mb-4">
+            Project <span class="text-transparent bg-clip-text bg-gradient-to-r from-ram-gold via-yellow-200 to-ram-gold">Gallery</span>
+        </h1>
+        <p class="reveal-up text-gray-400 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed">
+            A visual record of luxury remodeling, structural integrity, and architectural restoration across the San Gabriel Valley.
+        </p>
+    </header>
+
+    <main class="relative z-10 container mx-auto px-6 pb-32 flex-grow">
+        <div id="gallery-container" class="masonry-grid">
+            </div>
+
+        <div class="text-center mt-16 reveal-up">
+            <button id="load-more-btn" class="inline-flex items-center gap-3 border border-ram-gold text-ram-gold px-10 py-4 font-heading text-xl font-bold uppercase tracking-widest rounded-sm transition-all hover:bg-ram-gold hover:text-ram-navy hover:shadow-glow">
+                Load More Work <i class="fa-solid fa-angle-down"></i>
+            </button>
+        </div>
+    </main>
+
+    <div id="lightbox" class="fixed inset-0 z-[200] flex flex-col items-center justify-center p-4 cursor-zoom-out" onclick="closeLightbox()">
+        <button class="absolute top-10 right-10 text-white text-4xl hover:text-ram-gold transition">&times;</button>
+        <img id="lightbox-img" src="" class="max-w-full max-h-[85vh] rounded-sm shadow-2xl border border-white/10" alt="Work Preview">
+        <p class="mt-6 text-ram-gold font-heading text-2xl uppercase tracking-widest">RAM Construction • Pasadena, CA</p>
+    </div>
+
+    <footer class="bg-ram-dark border-t-4 border-ram-gold pt-24 pb-12 text-gray-300 font-sans antialiased relative z-10 mt-auto">
+        <div class="w-full max-w-7xl mx-auto px-6 text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24 mb-20">
+                <div>
+                    <h4 class="text-3xl font-heading font-bold text-white mb-8 flex items-center justify-center md:justify-start leading-none tracking-widest uppercase">
+                        <span class="text-ram-gold mr-3 text-3xl">📍</span> RAM Construction
+                    </h4>
+                    <p class="mb-6 text-sm leading-relaxed">
+                        Premier licensed general contractor in Pasadena, CA. Specializing in luxury remodeling and historic restoration.
+                    </p>
+                    <div class="space-y-3 text-sm">
+                        <p><strong class="text-white uppercase tracking-widest text-[10px]">Office:</strong> <a href="tel:+16266394749" class="hover:text-ram-lightGold transition">(626) 639-4749</a></p>
+                        <p><strong class="text-white uppercase tracking-widest text-[10px]">Email:</strong> <a href="mailto:info@ram-contractor.com" class="hover:text-ram-lightGold transition">info@ram-contractor.com</a></p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-2xl font-heading font-bold text-white mb-6 border-b border-white/10 pb-2 inline-block leading-none uppercase tracking-widest">Core Expertise</h4>
+                    <ul class="space-y-3 text-sm list-none pl-0 m-0 text-gray-400">
+                        <li>Kitchen & Bathroom Remodeling</li>
+                        <li>Historic Restoration</li>
+                        <li>Pasadena ADU Specialists</li>
+                        <li>Foundation & Structural Repair</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-2xl font-heading font-bold text-white mb-6 border-b border-white/10 pb-2 inline-block leading-none uppercase tracking-widest">Quick Access</h4>
+                    <ul class="space-y-4 text-sm font-medium list-none pl-0 m-0">
+                        <li><a href="/index.html" class="hover:text-ram-lightGold transition">Home</a></li>
+                        <li><a href="/services.html" class="hover:text-ram-lightGold transition">Our Services</a></li>
+                        <li><a href="/contact.html#inquiry-form" class="hover:text-ram-lightGold transition">Request Estimate</a></li>
+                        <li><a href="https://g.co/kgs/sjeJGdg" target="_blank" class="hover:text-ram-lightGold transition">Google Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-10 text-center text-xs text-gray-500">
+                &copy; 2026 RAM Construction. Licensed & Insured. Pasadena, CA. <br>
+                Website by <a href="https://www.hpo.center" target="_blank" class="text-gray-400 hover:text-ram-gold transition font-bold">HPO.Center</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- EXACT URLS PROVIDED BY USER ---
+        const images = [
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/3B7B3A4E-32C3-4EA9-9152-32288A42A476.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/530C46C7-7757-4C4E-8C89-B87211EA9E3B.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/663C5A90-92DF-459F-AD75-EC3547D2788A.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/89FD9484-AE8B-4844-B022-AF8FC0F153C1.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/8A6C0270-0F8E-45CA-B26F-A34D7B36C039.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/9673F311-4066-4CB1-83C7-67E6B09A2540.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/970BAA1B-E068-4DA3-8AAA-85A0F2637F4D.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/AE6104FC-C289-4FD8-8CD7-4ABAD7BDBB02.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/B4281077-C8DA-4642-A771-4FEA4AD91B10.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/BAB2086D-AEFB-44A7-B5A0-750AFC35F82D.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/CF175E1D-AD96-4001-86C5-64C179CB7F01.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/D7B27A1A-1233-4E09-8DF1-ADEA6762AD15.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/DDE2CBD3-90BE-44DD-9662-36028AC5963B.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/E0BF0B75-3BA5-464B-A958-C79F518A7B2C.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/EC6BC488-69DD-47FB-B1D1-3B1923A3E188.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/F0D338A5-9595-4161-A9BB-38C35CF2BEB9.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/0D742970-8333-47BB-B2C8-26CB80007673.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/0DCC0397-E73E-43B9-9B97-BFAFE532A427.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/1A662545-AD53-402C-B3A7-04C8F03AC7F4.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/1DB9E4D8-926A-4C76-8B6B-F9734B22D71E.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/2B277E7A-EF5E-4DB5-914E-49A9AE4F3396.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/2DB2A974-86AB-42FB-A749-8DDD0EDCC7D8.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/30C20246-96E5-438A-BF6F-93F261DFFCE6.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/02C49224-C1CC-49A2-AB3C-90197929F8AD.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/F6B8C571-E2B6-47D1-B5C1-BCFCD8159025.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_0268.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3099.JPG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3498.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3499.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3500.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3501.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3502.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3503.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3504.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3505.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3506.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3507.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3508.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3509.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3510.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3511.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3512.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3513.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3514.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3515.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3516.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3517.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3518.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3519.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3520.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3521.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3522.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3523.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3524.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3525.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3526.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3527.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3528.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3529.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3530.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3531.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3532.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3533.PNG",
+            "https://gallery.ram-contractor.com/First%20Gallery%20-%20html/IMG_3534.PNG"
+        ];
+
+        const container = document.getElementById('gallery-container');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        
+        // --- PAGINATION / BATCHING LOGIC ---
+        let currentIndex = 0;
+        const batchSize = 12; // Loads exactly 12 images per click
+
+        function loadNextBatch() {
+            const nextBatch = images.slice(currentIndex, currentIndex + batchSize);
+            
+            nextBatch.forEach((imgUrl, i) => {
+                const card = document.createElement('div');
+                // Added opacity-0 and translate-y-4 for a smooth slide-in animation when they mount
+                card.className = "gallery-card relative overflow-hidden rounded-lg border border-white/5 bg-ram-navy/20 cursor-zoom-in opacity-0 translate-y-4";
+                card.style.transition = `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${(i % 3) * 100}ms`;
+                
+                card.innerHTML = `
+                    <img src="${imgUrl}" 
+                         alt="RAM Construction Project Portfolio" 
+                         class="w-full h-auto object-cover block transition-transform duration-500 hover:scale-105" 
+                         loading="lazy"
+                         decoding="async"
+                         onerror="this.parentElement.style.display='none';" 
+                         onclick="openLightbox('${imgUrl}')">
+                `;
+                container.appendChild(card);
+
+                // Trigger smooth fade-in after appending to the DOM
+                setTimeout(() => {
+                    card.classList.remove('opacity-0', 'translate-y-4');
+                }, 50);
+            });
+
+            currentIndex += batchSize;
+
+            // Hide the "Load More" button if we run out of images
+            if (currentIndex >= images.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        }
+
+        // Initialize the first batch immediately
+        loadNextBatch();
+
+        // Bind the button to the function
+        loadMoreBtn.addEventListener('click', loadNextBatch);
+
+        // --- LIGHTBOX & MENU LOGIC ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
