@@ -2,8 +2,7 @@ const navContent = `
     <nav class="ram-top-nav" aria-label="Primary">
         <div class="ram-top-nav__inner">
             <a href="/index.html" class="ram-brand">
-                <span class="ram-brand__mark" aria-hidden="true">R</span>
-                <span class="ram-brand__name"><strong>RAM</strong><small>Construction</small></span>
+                <img class="ram-brand__logo" src="/logo.png" alt="RAM General Construction">
             </a>
             <div class="ram-desktop-links">
                 <a href="/index.html" data-nav="home">Home</a>
@@ -22,7 +21,7 @@ const navContent = `
 const menuContent = `
     <div id="mobile-menu" class="ram-mobile-menu" aria-hidden="true">
         <div class="ram-mobile-menu__bar">
-            <span class="ram-mobile-menu__label">RAM</span>
+            <img class="ram-mobile-menu__logo" src="/logo.png" alt="RAM General Construction">
             <button id="menu-close" class="ram-menu-close" type="button" aria-label="Close menu"><span aria-hidden="true">&times;</span></button>
         </div>
         <nav class="ram-mobile-menu__links" aria-label="Mobile">
@@ -43,7 +42,7 @@ const footerContent = `
     <footer class="site-footer" id="site-footer">
         <div class="wrap footer-grid">
             <div>
-                <h2>RAM Construction</h2>
+                <img class="footer-logo" src="/logo.png" alt="RAM General Construction">
                 <p>Pasadena’s contractor for historic restorations, luxury ADUs, and high-end residential remodeling across the San Gabriel Valley.</p>
                 <p><a href="tel:+16266394749">(626) 639-4749</a><br><a href="mailto:info@ram-contractor.com">info@ram-contractor.com</a><br>Mon–Sat, 8:00 AM – 5:00 PM</p>
             </div>
@@ -86,15 +85,10 @@ const navStyles = `
         height: 100%; max-width: 1160px; margin: 0 auto; padding: 0 1rem;
         display: flex; align-items: center; justify-content: space-between; gap: 1rem;
     }
-    .ram-brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; color: white; }
-    .ram-brand__mark {
-        width: 38px; height: 38px; display: grid; place-items: center;
-        border-radius: 12px; background: #e2b340; color: #1a1404;
-        font-family: Outfit, sans-serif; font-weight: 700; font-size: 1.15rem;
-    }
-    .ram-brand__name { display: flex; flex-direction: column; line-height: 1; }
-    .ram-brand__name strong { font-family: Outfit, sans-serif; letter-spacing: 0.16em; font-size: 1.05rem; }
-    .ram-brand__name small { margin-top: 0.2rem; color: #9aabc0; letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.62rem; font-weight: 700; }
+    .ram-brand { display: flex; align-items: center; text-decoration: none; }
+    .ram-brand__logo { height: 62px; width: auto; display: block; }
+    .ram-mobile-menu__logo { height: 42px; width: auto; display: block; }
+    .footer-logo { height: 88px; width: auto; display: block; margin: 0 0 0.85rem; }
     .ram-desktop-links { display: none; align-items: center; gap: 1.4rem; }
     .ram-desktop-links a { color: #eef3f8; text-decoration: none; font-size: 0.95rem; font-weight: 650; }
     .ram-desktop-links a:hover, .ram-desktop-links a.is-current { color: #e2b340; }
@@ -124,7 +118,10 @@ const navStyles = `
         display: flex; align-items: center; justify-content: space-between;
         padding: max(0.9rem, env(safe-area-inset-top)) 1rem 0.9rem; border-bottom: 1px solid rgba(231,237,245,0.08);
     }
-    .ram-mobile-menu__label { font-family: Outfit, sans-serif; letter-spacing: 0.16em; font-size: 1.1rem; }
+    @media (max-width: 720px) {
+        .ram-brand__logo { height: 52px; }
+        .footer-logo { height: 72px; }
+    }
     .ram-menu-close { font-size: 1.7rem; }
     .ram-mobile-menu__links {
         flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center;
