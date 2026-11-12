@@ -67,7 +67,7 @@ const footerContent = `
         </div>
         <div class="wrap legal">
             <span>© 2026 RAM Construction. Pasadena.</span>
-            <span>Site by <a href="https://www.hpo.center" target="_blank" rel="noopener">HPO.Center</a></span>
+            <span>Site by <a href="https://www.hpo.center/case-studies" target="_blank" rel="noopener">HPO.Center</a></span>
         </div>
     </footer>
 `;
