@@ -2,13 +2,14 @@ const navContent = `
     <nav class="ram-top-nav" aria-label="Primary">
         <div class="ram-top-nav__inner">
             <a href="/index.html" class="ram-brand">
-                <img class="ram-brand__logo" src="/logo.png" alt="RAM General Construction">
+                <img class="ram-brand__logo" src="/logo.png" alt="RAM General Construction" width="282" height="230">
             </a>
             <div class="ram-desktop-links">
                 <a href="/index.html" data-nav="home">Home</a>
                 <a href="/services.html" data-nav="services">Services</a>
                 <a href="/portfolio.html" data-nav="portfolio">Portfolio</a>
                 <a href="/contact.html" data-nav="contact">Contact</a>
+                <a href="tel:+16265370090" class="ram-desktop-direct"><span>Direct</span> (626) 537-0090</a>
                 <a href="/contact.html#inquiry-form" class="ram-desktop-cta">Free estimate</a>
             </div>
             <button id="menu-toggle" class="ram-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
@@ -21,10 +22,11 @@ const navContent = `
 const menuContent = `
     <div id="mobile-menu" class="ram-mobile-menu" aria-hidden="true">
         <div class="ram-mobile-menu__bar">
-            <img class="ram-mobile-menu__logo" src="/logo.png" alt="RAM General Construction">
+            <img class="ram-mobile-menu__logo" src="/logo.png" alt="RAM General Construction" width="282" height="230">
             <button id="menu-close" class="ram-menu-close" type="button" aria-label="Close menu"><span aria-hidden="true">&times;</span></button>
         </div>
         <nav class="ram-mobile-menu__links" aria-label="Mobile">
+            <a href="tel:+16265370090" class="ram-mobile-direct"><span>Direct</span> (626) 537-0090</a>
             <a href="/index.html" data-nav="home">Home</a>
             <a href="/services.html" data-nav="services">Services</a>
             <a href="/portfolio.html" data-nav="portfolio">Portfolio</a>
@@ -42,7 +44,7 @@ const footerContent = `
     <footer class="site-footer" id="site-footer">
         <div class="wrap footer-grid">
             <div class="footer-identity">
-                <img class="footer-logo" src="/logo.png" alt="RAM General Construction">
+                <img class="footer-logo" src="/logo.png" alt="RAM General Construction" width="282" height="230">
                 <p class="footer-name">RAM Construction</p>
                 <p class="footer-role">Small residential projects in Pasadena.</p>
                 <p class="footer-areas">Larger or permit-required work is done with licensed partners.</p>
@@ -91,6 +93,14 @@ const navStyles = `
     .ram-desktop-links { display: none; align-items: center; gap: 1.4rem; }
     .ram-desktop-links a { color: #eef3f8; text-decoration: none; font-size: 0.95rem; font-weight: 650; }
     .ram-desktop-links a:hover, .ram-desktop-links a.is-current { color: #e2b340; }
+    .ram-desktop-links a.ram-desktop-direct {
+        display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px;
+        color: #e2b340; font-weight: 700; white-space: nowrap;
+    }
+    .ram-desktop-links a.ram-desktop-direct span {
+        font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .ram-desktop-links a.ram-desktop-direct:hover { color: #f0c75a; }
     .ram-desktop-cta {
         margin-left: 0.4rem; padding: 0.7rem 1rem; border-radius: 999px;
         background: #e2b340; color: #1a1404 !important;
@@ -129,6 +139,17 @@ const navStyles = `
         display: block; padding: 0.85rem 0; border-bottom: 1px solid rgba(231,237,245,0.08);
         color: white; text-decoration: none; font-family: Outfit, sans-serif;
         font-size: clamp(1.8rem, 7vh, 2.6rem); letter-spacing: -0.04em;
+    }
+    .ram-mobile-menu__links a.ram-mobile-direct {
+        display: flex; align-items: center; justify-content: center; gap: 0.55rem;
+        min-height: 44px; margin: 0 0 0.75rem; padding: 0.75rem 1rem;
+        border: 0; border-radius: 999px; background: #e2b340; color: #071422;
+        font-family: Outfit, sans-serif; font-size: 1.2rem; font-weight: 700;
+        letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .ram-mobile-menu__links a.ram-mobile-direct span {
+        font-family: Manrope, sans-serif; font-size: 0.72rem; font-weight: 700;
+        letter-spacing: 0.14em; text-transform: uppercase;
     }
     .ram-mobile-menu__links a.is-current { color: #e2b340; }
     .ram-mobile-menu__foot {
@@ -194,6 +215,34 @@ if (navHost) {
             menuToggle.focus();
         }
     });
+
+    if (!document.getElementById('back-to-top')) {
+        document.body.insertAdjacentHTML('beforeend', `
+            <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M12 5.2 4.8 12.4l1.4 1.4L11 8.99V19h2V8.99l4.8 4.81 1.4-1.4z"/>
+                </svg>
+            </button>
+        `);
+        const toTop = document.getElementById('back-to-top');
+        const syncToTop = () => {
+            toTop.classList.toggle('is-visible', window.scrollY >= 400);
+        };
+        document.addEventListener('scroll', syncToTop, { passive: true });
+        syncToTop();
+        toTop.addEventListener('click', () => {
+            const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const root = document.documentElement;
+            if (reduce) {
+                const previous = root.style.scrollBehavior;
+                root.style.scrollBehavior = 'auto';
+                window.scrollTo(0, 0);
+                root.style.scrollBehavior = previous;
+                return;
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 }
 
 if (!document.querySelector('script[src="/fx.js"]')) {

@@ -22,7 +22,11 @@
     <meta name="twitter:image" content="https://gallery.ram-contractor.com/First%20Gallery%20-%20html/BAB2086D-AEFB-44A7-B5A0-750AFC35F82D.JPG" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://gallery.ram-contractor.com" crossorigin>
+    <link rel="dns-prefetch" href="https://gallery.ram-contractor.com">
+    <link rel="preconnect" href="https://gallery.ram-contractor.com">
+    <link rel="dns-prefetch" href="https://images.squarespace-cdn.com">
+    <link rel="preconnect" href="https://images.squarespace-cdn.com">
+    <link rel="preload" as="image" href="/logo.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/site.css">
@@ -248,11 +252,13 @@
             lightboxImg.src = src;
             lightbox.style.display = 'flex';
             document.body.style.overflow = 'hidden';
+            document.body.classList.add('ram-lightbox-open');
         }
 
         function closeLightbox() {
             lightbox.style.display = 'none';
             document.body.style.overflow = 'auto';
+            document.body.classList.remove('ram-lightbox-open');
         }
 
         // Reveal Animation
