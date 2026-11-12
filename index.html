@@ -71,8 +71,8 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/site.css">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -135,301 +135,169 @@
         }
     </style>
 </head>
-<body class="bg-ram-dark text-white font-sans antialiased selection:bg-ram-gold selection:text-ram-navy overflow-x-hidden">
+<body>
     
-    <div class="fixed inset-0 bg-noise opacity-40 pointer-events-none z-0"></div>
-
     <div id="global-nav"></div>
     <script src="nav.js"></script>
 
-    <header class="relative min-h-[90vh] md:min-h-screen flex flex-col items-center justify-center hero-parallax overflow-hidden pt-28 md:pt-20">
-        <div class="absolute inset-0 bg-noise opacity-40 pointer-events-none z-0"></div>
-        
-        <div class="absolute top-1/4 left-5 md:left-10 w-24 md:w-32 h-24 md:h-32 bg-ram-gold/20 rounded-full blur-[60px] md:blur-[80px] animate-pulse"></div>
-        <div class="absolute bottom-1/4 right-5 md:right-10 w-32 md:w-40 h-32 md:h-40 bg-blue-500/10 rounded-full blur-[60px] md:blur-[80px]"></div>
-
-        <div class="relative z-10 container mx-auto px-6 text-center">
-            <div class="reveal-up inline-block mb-6 border border-white/20 bg-white/5 backdrop-blur-md px-4 md:px-6 py-2 rounded-full">
-                <span class="text-ram-gold text-[10px] md:text-xs font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase">Pasadena • San Marino • Altadena</span>
-            </div>
-            
-            <h1 class="reveal-up font-heading text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.9] md:leading-[0.85] tracking-tight mb-6 md:mb-8 uppercase">
-                Built On <br>
-                <span class="gold-gradient-text">Reputation</span>
-            </h1>
-            
-            <p class="reveal-up text-base md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 md:mb-12 font-light leading-relaxed px-4 md:px-0">
-                Pasadena’s definitive contractor for <span class="text-white font-medium underline decoration-ram-gold/50 underline-offset-4 md:underline-offset-8">historic restorations</span>, luxury ADUs, and high-end residential remodeling.
-            </p>
-            
-            <div class="reveal-up flex justify-center items-center">
-                <a href="/contact.html#inquiry-form" class="group relative px-8 py-4 md:px-12 md:py-6 bg-ram-gold text-ram-navy font-heading text-xl md:text-2xl font-bold uppercase tracking-wide overflow-hidden rounded-sm transition-all hover:shadow-glow-strong w-full sm:w-auto">
-                    <span class="relative z-10 flex items-center justify-center gap-3">
-                        Start Your Project <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
-                    </span>
-                    <div class="absolute inset-0 bg-white transform -translate-x-full skew-x-12 group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-                </a>
+    <header class="hero wrap">
+        <div>
+            <p class="eyebrow">Pasadena · San Marino · Altadena</p>
+            <h1>Built on <em>reputation.</em></h1>
+            <p class="lede">Historic restorations, luxury ADUs, and high-end residential remodeling for homes across the San Gabriel Valley.</p>
+            <div class="actions">
+                <a class="btn btn-gold" href="/contact.html#inquiry-form">Start your project</a>
+                <a class="btn btn-ghost" href="/portfolio.html">View the work</a>
             </div>
         </div>
-        
-        <div class="absolute bottom-6 md:bottom-10 left-0 right-0 mx-auto w-fit z-30 flex flex-col items-center gap-2 opacity-60 animate-bounce">
-            <span class="text-[8px] md:text-[10px] uppercase tracking-widest font-bold">Scroll</span>
-            <div class="w-[1px] h-8 md:h-12 bg-gradient-to-b from-white to-transparent"></div>
+        <div class="hero-media" role="img" aria-label="RAM Construction project in Pasadena">
+            <div class="hero-card">
+                <div><strong>15+</strong><span>Years active</span></div>
+                <div><strong>300+</strong><span>Local builds</span></div>
+                <div><strong>A+</strong><span>Safety rating</span></div>
+            </div>
         </div>
     </header>
 
-    <div class="relative z-20 bg-ram-navy border-y border-white/5">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/5 text-center">
-                <div class="py-8 md:py-12 group cursor-default">
-                    <div class="text-4xl md:text-5xl font-heading font-bold text-white group-hover:text-ram-gold transition duration-500">15+</div>
-                    <div class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-[0.2em] mt-2 font-bold">Years Active</div>
-                </div>
-                <div class="py-8 md:py-12 group cursor-default">
-                    <div class="text-4xl md:text-5xl font-heading font-bold text-white group-hover:text-ram-gold transition duration-500">300+</div>
-                    <div class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-[0.2em] mt-2 font-bold">Local Builds</div>
-                </div>
-                <div class="py-8 md:py-12 group cursor-default border-t lg:border-t-0 border-white/5">
-                    <div class="text-4xl md:text-5xl font-heading font-bold text-white group-hover:text-ram-gold transition duration-500">100%</div>
-                    <div class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-[0.2em] mt-2 font-bold">Pass Rate</div>
-                </div>
-                <div class="py-8 md:py-12 group cursor-default border-t lg:border-t-0 border-white/5">
-                    <div class="text-4xl md:text-5xl font-heading font-bold text-white group-hover:text-ram-gold transition duration-500">A+</div>
-                    <div class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-[0.2em] mt-2 font-bold">Safety Rating</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section id="services-overview" class="py-20 md:py-32 relative overflow-hidden bg-ram-dark">
-        <div class="absolute inset-0 bg-noise opacity-40 pointer-events-none z-0"></div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-20 reveal-up">
-                <div class="mb-4 lg:mb-0">
-                    <h3 class="text-ram-gold font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-2 md:mb-4 text-xs md:text-sm font-sans">Our Expertise</h3>
-                    <h2 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white uppercase leading-none">Master Builders</h2>
-                </div>
-                <p class="text-gray-400 max-w-md lg:text-right text-sm md:text-base leading-relaxed font-sans">
-                    Specializing in the difficult, the complex, and the detailed aspects of luxury residential construction in the SGV.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
-                <div class="js-tilt group relative bg-white/5 border border-white/10 p-8 md:p-10 rounded-xl hover:border-ram-gold/50 transition-all duration-500 shadow-2xl">
-                    <i class="fa-solid fa-sink text-3xl md:text-4xl text-ram-gold mb-6 md:mb-8"></i>
-                    <h3 class="text-2xl md:text-3xl font-heading font-bold mb-3 md:mb-4 uppercase tracking-wide">Remodeling</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 md:mb-8 font-sans">High-end kitchen and bathroom transformations featuring custom tile and stone work.</p>
-                    <div class="w-full h-[1px] bg-white/10 group-hover:bg-ram-gold transition-colors duration-500"></div>
-                </div>
-
-                <div class="js-tilt group relative bg-white/5 border border-white/10 p-8 md:p-10 rounded-xl hover:border-ram-gold/50 transition-all duration-500 shadow-2xl">
-                    <i class="fa-solid fa-monument text-3xl md:text-4xl text-ram-gold mb-6 md:mb-8"></i>
-                    <h3 class="text-2xl md:text-3xl font-heading font-bold mb-3 md:mb-4 uppercase tracking-wide">Restoration</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 md:mb-8 font-sans">Specialized restoration for Pasadena’s historic bungalows, respecting original architectural integrity.</p>
-                    <div class="w-full h-[1px] bg-white/10 group-hover:bg-ram-gold transition-colors duration-500"></div>
-                </div>
-
-                <div class="js-tilt group relative bg-white/5 border border-white/10 p-8 md:p-10 rounded-xl hover:border-ram-gold/50 transition-all duration-500 shadow-2xl">
-                    <i class="fa-solid fa-house-chimney-medical text-3xl md:text-4xl text-ram-gold mb-6 md:mb-8"></i>
-                    <h3 class="text-2xl md:text-3xl font-heading font-bold mb-3 md:mb-4 uppercase tracking-wide">ADU Builds</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 md:mb-8 font-sans">Turning detached garages into luxury guest houses and rental suites with full permit handling.</p>
-                    <div class="w-full h-[1px] bg-white/10 group-hover:bg-ram-gold transition-colors duration-500"></div>
-                </div>
-
-                <div class="js-tilt group relative bg-white/5 border border-white/10 p-8 md:p-10 rounded-xl hover:border-ram-gold/50 transition-all duration-500 shadow-2xl">
-                    <i class="fa-solid fa-fire-burner text-3xl md:text-4xl text-ram-gold mb-6 md:mb-8"></i>
-                    <h3 class="text-2xl md:text-3xl font-heading font-bold mb-3 md:mb-4 uppercase tracking-wide">Outdoor Living</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 md:mb-8 font-sans">Custom BBQ islands, masonry fire pits, and premium hardscaping for the local lifestyle.</p>
-                    <div class="w-full h-[1px] bg-white/10 group-hover:bg-ram-gold transition-colors duration-500"></div>
-                </div>
-            </div>
+    <section class="band">
+        <div class="wrap stat-row">
+            <div><strong>15+</strong><span>Years active</span></div>
+            <div><strong>300+</strong><span>Local builds</span></div>
+            <div><strong>100%</strong><span>Pass rate</span></div>
+            <div><strong>A+</strong><span>Safety rating</span></div>
         </div>
     </section>
 
-    <section class="py-20 md:py-24 bg-ram-navy/30 border-y border-white/5 relative z-20">
-        <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12 md:mb-16 reveal-up">
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4 md:mb-6 uppercase tracking-widest">Local Heritage Mastery</h2>
-                    <p class="text-gray-400 text-xs md:text-sm uppercase tracking-[0.2em] font-sans">Serving Pasadena's Iconic Neighborhoods</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
-                    <div class="reveal-up border-l-0 md:border-l border-ram-gold/30 pl-0 md:pl-8">
-                        <h4 class="text-ram-gold font-bold mb-2 md:mb-3 uppercase tracking-tighter font-heading text-xl md:text-2xl">Bungalow Heaven</h4>
-                        <p class="text-gray-300 text-sm leading-relaxed font-sans">Authentic stucco restoration and historic preserve-work for Pasadena's legendary craftsman bungalows.</p>
-                    </div>
-                    <div class="reveal-up border-l-0 md:border-l border-ram-gold/30 pl-0 md:pl-8 md:delay-100">
-                        <h4 class="text-ram-gold font-bold mb-2 md:mb-3 uppercase tracking-tighter font-heading text-xl md:text-2xl">San Marino Estates</h4>
-                        <p class="text-gray-300 text-sm leading-relaxed font-sans">High-end kitchen remodeling and structural reinforcements for estate-level properties.</p>
-                    </div>
-                    <div class="reveal-up border-l-0 md:border-l border-ram-gold/30 pl-0 md:pl-8 md:delay-200">
-                        <h4 class="text-ram-gold font-bold mb-2 md:mb-3 uppercase tracking-tighter font-heading text-xl md:text-2xl">Altadena Foothills</h4>
-                        <p class="text-gray-300 text-sm leading-relaxed font-sans">Custom ADU guest houses and hillside foundation repairs engineered for local topography.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="py-20 md:py-32 bg-black relative z-10">
-        <div class="container mx-auto px-6">
-            
-            <div class="text-center mb-16 md:mb-24 reveal-up">
-                <h3 class="text-ram-gold font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4 text-xs md:text-sm font-sans">Craftsmanship</h3>
-                <h2 class="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white mb-6 uppercase tracking-tighter">Selected Works</h2>
-                <div class="w-16 md:w-24 h-1 bg-ram-gold mx-auto mb-6 md:mb-8"></div>
-                <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg lg:text-xl font-light leading-relaxed">
-                    A glimpse into our commitment to structural integrity and architectural beauty. View a few of our featured builds below, or explore our complete visual record.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                <div class="flex flex-col gap-8 md:gap-12">
-                    <div class="reveal-up group relative overflow-hidden rounded-sm aspect-[4/5] border border-white/5">
-                        <img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/8bafc5f5-e090-40de-b431-98bd433fa2bb/IMG_3500.webp" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110" alt="Altadena Custom Staircase Build">
-                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-500"></div>
-                        <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10">
-                            <p class="text-ram-gold text-[10px] md:text-xs font-bold uppercase tracking-widest mb-1 md:mb-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500 font-sans">Altadena, CA</p>
-                            <h3 class="text-3xl md:text-4xl font-heading font-bold uppercase tracking-tight shadow-black drop-shadow-md">Custom Staircase</h3>
-                        </div>
-                    </div>
-                    <div class="reveal-up group relative overflow-hidden rounded-sm aspect-[4/3] border border-white/5">
-                        <img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/d6560f3d-d3cf-44b2-9857-887a100ac8f8/IMG_3507.webp" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110" alt="Pasadena Exterior Framing Construction">
-                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-500"></div>
-                        <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10">
-                            <p class="text-ram-gold text-[10px] md:text-xs font-bold uppercase tracking-widest mb-1 md:mb-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500 font-sans">Pasadena, CA</p>
-                            <h3 class="text-3xl md:text-4xl font-heading font-bold uppercase tracking-tight shadow-black drop-shadow-md">Exterior Framing</h3>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col gap-8 md:gap-12 md:pt-24">
-                    <div class="reveal-up group relative overflow-hidden rounded-sm aspect-[4/3] border border-white/5">
-                        <img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/a2473262-7083-40e5-b740-598e5697f34e/IMG_3499.webp" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110" alt="San Marino Entry Remodel">
-                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-500"></div>
-                        <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10">
-                            <p class="text-ram-gold text-[10px] md:text-xs font-bold uppercase tracking-widest mb-1 md:mb-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500 font-sans">San Marino, CA</p>
-                            <h3 class="text-3xl md:text-4xl font-heading font-bold uppercase tracking-tight shadow-black drop-shadow-md">Entry Remodel</h3>
-                        </div>
-                    </div>
-                    <div class="reveal-up group relative overflow-hidden rounded-sm aspect-[4/5] border border-white/5">
-                        <img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/70622447-4fba-4287-ad54-cc3b1ddc5559/0D742970-8333-47BB-B2C8-26CB80007673.JPG" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110" alt="Structural Rebar Foundation Los Angeles">
-                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-500"></div>
-                        <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10">
-                            <p class="text-ram-gold text-[10px] md:text-xs font-bold uppercase tracking-widest mb-1 md:mb-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500 font-sans">Los Angeles, CA</p>
-                            <h3 class="text-3xl md:text-4xl font-heading font-bold uppercase tracking-tight shadow-black drop-shadow-md">Rebar & Concrete</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-16 md:mt-24 text-center reveal-up">
-                <a href="/portfolio.html" class="inline-flex items-center justify-center gap-3 md:gap-4 border border-ram-gold text-ram-gold px-8 md:px-12 py-4 md:py-5 font-heading text-xl md:text-2xl font-bold uppercase tracking-widest rounded-sm transition-all hover:bg-ram-gold hover:text-ram-navy hover:shadow-glow-strong w-full sm:w-auto">
-                    Explore Full Gallery <i class="fa-solid fa-arrow-right-long"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 md:py-24 bg-ram-navy border-t border-white/5 relative z-20">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-start gap-4 mb-12 md:mb-16 reveal-up">
-                <div class="w-12 h-[1px] bg-ram-gold hidden md:block"></div>
-                <h3 class="text-ram-gold font-bold tracking-[0.2em] uppercase text-sm font-sans text-center md:text-left">Verified Client Feedback</h3>
-                <div class="w-12 h-[1px] bg-ram-gold hidden md:block"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
-                <div class="reveal-up text-center md:text-left">
-                    <div class="flex justify-center md:justify-start text-ram-gold mb-6 md:mb-8 gap-1 text-lg md:text-xl"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <blockquote class="text-xl md:text-3xl font-light text-white leading-relaxed mb-6 md:mb-8 italic">"RAM Construction handled our complex hillside foundation repair with incredible precision. They navigated the city permitting process seamlessly."</blockquote>
-                    <cite class="not-italic text-gray-500 font-bold uppercase tracking-widest text-[10px] md:text-xs font-sans">— James H., Pasadena Resident</cite>
-                </div>
-                 <div class="reveal-up md:delay-100 text-center md:text-left">
-                    <div class="flex justify-center md:justify-start text-ram-gold mb-6 md:mb-8 gap-1 text-lg md:text-xl"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <blockquote class="text-xl md:text-3xl font-light text-white leading-relaxed mb-6 md:mb-8 italic">"The craftsmanship on our kitchen addition is flawless. The team was clean, respectful, and finished two weeks ahead of schedule."</blockquote>
-                    <cite class="not-italic text-gray-500 font-bold uppercase tracking-widest text-[10px] md:text-xs font-sans">— Sarah & Mike, Altadena Residents</cite>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-ram-dark border-t-4 border-ram-gold pt-16 md:pt-24 pb-8 md:pb-12 text-gray-300 font-sans antialiased relative z-10">
-        <div class="w-full max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 lg:gap-24 mb-16 md:mb-20 text-center md:text-left">
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
                 <div>
-                    <h4 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6 md:mb-8 flex items-center justify-center md:justify-start leading-none tracking-widest uppercase">
-                        <span class="text-ram-gold mr-3 text-2xl md:text-3xl">📍</span> RAM Construction
-                    </h4>
-                    <p class="mb-6 md:mb-8 leading-relaxed text-sm font-light">
-                        The San Gabriel Valley’s definitive general contractor for complex structural engineering, luxury remodeling, and faithful historic restorations.
-                    </p>
-                    <div class="space-y-3 md:space-y-4 text-sm font-sans">
-                        <p class="flex items-center justify-center md:justify-start gap-3 md:gap-4"><strong class="text-white text-[10px] uppercase tracking-widest">Office:</strong> <a href="tel:+16266394749" class="hover:text-ram-gold transition">(626) 639-4749</a></p>
-                        <p class="flex items-center justify-center md:justify-start gap-3 md:gap-4"><strong class="text-white text-[10px] uppercase tracking-widest">Support:</strong> <a href="mailto:info@ram-contractor.com" class="hover:text-ram-gold transition font-medium">info@ram-contractor.com</a></p>
-                        <p class="flex items-center justify-center md:justify-start gap-3 md:gap-4"><strong class="text-white text-[10px] uppercase tracking-widest">Hours:</strong> <span class="text-gray-400">Mon–Sat: 8:00 AM – 5:00 PM</span></p>
-                    </div>
+                    <p class="eyebrow">Expertise</p>
+                    <h2>What we build</h2>
                 </div>
-
-                <div>
-                    <h4 class="text-xl md:text-2xl font-heading font-bold text-white mb-6 md:mb-8 border-b border-white/10 pb-2 md:pb-3 inline-block uppercase tracking-widest">Core Expertise</h4>
-                    <ul class="space-y-3 md:space-y-4 text-[10px] md:text-xs font-bold uppercase tracking-[0.15em] list-none pl-0 m-0 text-gray-400">
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fa-solid fa-hammer text-ram-gold text-[10px]"></i> Luxury Kitchen & Bath</li>
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fa-solid fa-hammer text-ram-gold text-[10px]"></i> Historic Restoration</li>
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fa-solid fa-hammer text-ram-gold text-[10px]"></i> Pasadena ADU Specialists</li>
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fa-solid fa-hammer text-ram-gold text-[10px]"></i> Foundation & Structural</li>
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fa-solid fa-hammer text-ram-gold text-[10px]"></i> Outdoor Living Kitchens</li>
-                    </ul>
-                </div>
-
-                <div class="md:col-span-2 lg:col-span-1">
-                    <h4 class="text-xl md:text-2xl font-heading font-bold text-white mb-6 md:mb-8 border-b border-white/10 pb-2 md:pb-3 inline-block uppercase tracking-widest">Quick Access</h4>
-                    <ul class="space-y-4 md:space-y-5 text-sm font-medium list-none pl-0 m-0 flex flex-col items-center md:items-start">
-                        <li><a href="/index.html" class="hover:text-ram-gold transition flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] text-ram-gold group-hover:translate-x-1 transition"></i> Home</a></li>
-                        <li><a href="/services.html" class="hover:text-ram-gold transition flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] text-ram-gold group-hover:translate-x-1 transition"></i> Our Services</a></li>
-                        <li><a href="/portfolio.html" class="hover:text-ram-gold transition flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] text-ram-gold group-hover:translate-x-1 transition"></i> Portfolio</a></li>
-                        <li><a href="/contact.html#inquiry-form" class="text-ram-gold transition flex items-center gap-2 group font-bold underline decoration-ram-gold/30">Request a Free Estimate</a></li>
-                        <li><a href="https://g.co/kgs/sjeJGdg" target="_blank" class="hover:text-ram-gold transition flex items-center gap-2 group"><i class="fa-brands fa-google text-[10px] text-ram-gold"></i> Google Business Profile</a></li>
-                    </ul>
-                </div>
+                <p>The difficult, detailed work: luxury residential construction, historic fabric, and hillside structure.</p>
             </div>
-
-            <div class="border-t border-white/10 pt-8 md:pt-10 text-center">
-                <p class="text-[8px] md:text-[10px] text-gray-500 mb-3 md:mb-4 uppercase tracking-[0.3em] font-sans">&copy; 2026 RAM Construction. Licensed & Insured. Pasadena, CA.</p>
-                <p class="text-[10px] md:text-xs text-gray-600 font-sans">Website Engineering by <a href="https://www.hpo.center" target="_blank" class="text-gray-400 hover:text-ram-gold transition font-bold">HPO.Center</a></p>
+            <div class="service-grid">
+                <article class="card">
+                    <span class="num">01</span>
+                    <h3>Remodeling</h3>
+                    <p>High-end kitchens and bathrooms with custom tile and stone.</p>
+                    <a class="more" href="/services.html">See services</a>
+                </article>
+                <article class="card">
+                    <span class="num">02</span>
+                    <h3>Restoration</h3>
+                    <p>Historic bungalow work that keeps the original architecture intact.</p>
+                    <a class="more" href="/services.html">See services</a>
+                </article>
+                <article class="card">
+                    <span class="num">03</span>
+                    <h3>ADU builds</h3>
+                    <p>Garages turned into guest houses and rental suites, permits included.</p>
+                    <a class="more" href="/services.html">See services</a>
+                </article>
+                <article class="card">
+                    <span class="num">04</span>
+                    <h3>Outdoor living</h3>
+                    <p>BBQ islands, masonry fire pits, and hardscaping built for the way you live.</p>
+                    <a class="more" href="/services.html">See services</a>
+                </article>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        // Reveal Animations (Desktop & Mobile optimized)
-        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    obs.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+    <section class="section" style="padding-top:0">
+        <div class="wrap">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Neighborhoods</p>
+                    <h2>Local heritage</h2>
+                </div>
+                <p>Work shaped for the houses and hills of Pasadena, San Marino, and Altadena.</p>
+            </div>
+            <div class="place-grid">
+                <article class="card">
+                    <h3>Bungalow Heaven</h3>
+                    <p>Stucco restoration and preserve-work for Pasadena’s craftsman bungalows.</p>
+                </article>
+                <article class="card">
+                    <h3>San Marino estates</h3>
+                    <p>Kitchen remodeling and structural reinforcement for estate properties.</p>
+                </article>
+                <article class="card">
+                    <h3>Altadena foothills</h3>
+                    <p>ADU guest houses and hillside foundation repairs for the local topography.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-        // Tilt Effect (Disabled on Mobile for better scrolling UX)
-        if (window.matchMedia("(min-width: 768px)").matches) {
-            document.querySelectorAll('.js-tilt').forEach(card => {
-                card.addEventListener('mousemove', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left - rect.width / 2;
-                    const y = e.clientY - rect.top - rect.height / 2;
-                    card.style.transform = `perspective(1000px) rotateX(${y / -15}deg) rotateY(${x / 15}deg)`;
-                });
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = `perspective(1000px) rotateX(0) rotateY(0)`;
-                    card.style.transition = 'transform 0.5s ease';
-                });
-                card.addEventListener('mouseenter', () => card.style.transition = 'none');
-            });
-        }
-    </script>
+    <section class="section" style="padding-top:0">
+        <div class="wrap">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Craftsmanship</p>
+                    <h2>Selected works</h2>
+                </div>
+                <p>A few recent builds. The full record is in the gallery.</p>
+            </div>
+            <div class="work-grid">
+                <div class="work-col">
+                    <a class="work-card tall" href="/portfolio.html">
+                        <img src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/8bafc5f5-e090-40de-b431-98bd433fa2bb/IMG_3500.webp" alt="Custom staircase in Altadena">
+                        <div class="cap"><small>Altadena</small><strong>Custom staircase</strong></div>
+                    </a>
+                    <a class="work-card" href="/portfolio.html">
+                        <img src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/d6560f3d-d3cf-44b2-9857-887a100ac8f8/IMG_3507.webp" alt="Exterior framing in Pasadena">
+                        <div class="cap"><small>Pasadena</small><strong>Exterior framing</strong></div>
+                    </a>
+                </div>
+                <div class="work-col">
+                    <a class="work-card" href="/portfolio.html">
+                        <img src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/a2473262-7083-40e5-b740-598e5697f34e/IMG_3499.webp" alt="Entry remodel in San Marino">
+                        <div class="cap"><small>San Marino</small><strong>Entry remodel</strong></div>
+                    </a>
+                    <a class="work-card tall" href="/portfolio.html">
+                        <img src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/70622447-4fba-4287-ad54-cc3b1ddc5559/0D742970-8333-47BB-B2C8-26CB80007673.JPG" alt="Rebar and concrete work in Los Angeles">
+                        <div class="cap"><small>Los Angeles</small><strong>Rebar & concrete</strong></div>
+                    </a>
+                </div>
+            </div>
+            <div class="actions" style="margin-top:1.25rem">
+                <a class="btn btn-ghost" href="/portfolio.html">Explore the full gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+        <div class="wrap">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Clients</p>
+                    <h2>What neighbors say</h2>
+                </div>
+            </div>
+            <div class="quote-grid">
+                <blockquote class="quote">
+                    <div class="stars" aria-label="5 stars">★★★★★</div>
+                    <p>“RAM Construction handled our complex hillside foundation repair with incredible precision. They navigated the city permitting process seamlessly.”</p>
+                    <cite>James H., Pasadena</cite>
+                </blockquote>
+                <blockquote class="quote">
+                    <div class="stars" aria-label="5 stars">★★★★★</div>
+                    <p>“The craftsmanship on our kitchen addition is flawless. The team was clean, respectful, and finished two weeks ahead of schedule.”</p>
+                    <cite>Sarah & Mike, Altadena</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-band">
+        <div>
+            <h2>Ready to start?</h2>
+            <p>Tell us about the house, the timeline, and the neighborhood.</p>
+        </div>
+        <a class="btn btn-gold" href="/contact.html#inquiry-form">Request an estimate</a>
+    </section>
 </body>
 </html>

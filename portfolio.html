@@ -26,7 +26,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://gallery.ram-contractor.com" crossorigin>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Teko:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/site.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -48,19 +49,7 @@
     </script>
 
     <style>
-        .reveal-up { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
-        .reveal-up.active { opacity: 1; transform: translateY(0); }
-        
-        /* High-End Masonry Grid */
-        .masonry-grid { columns: 1; gap: 1.5rem; }
-        @media (min-width: 768px) { .masonry-grid { columns: 2; } }
-        @media (min-width: 1024px) { .masonry-grid { columns: 3; } }
-        
-        .gallery-card { break-inside: avoid; margin-bottom: 1.5rem; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        .gallery-card:hover { transform: scale(1.02); z-index: 10; box-shadow: 0 0 30px rgba(217, 164, 4, 0.2); border-color: rgba(217, 164, 4, 0.5); }
-
-        /* Lightbox */
-        #lightbox { display: none; background: rgba(5, 17, 33, 0.98); backdrop-filter: blur(10px); }
+        #lightbox { display: none; }
         
         .bg-noise {
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
@@ -74,26 +63,16 @@
     <div id="global-nav"></div>
     <script src="nav.js"></script>
 
-    <header class="relative pt-48 pb-16 text-center container mx-auto px-6 z-10">
-        <div class="reveal-up inline-block mb-4 border border-ram-gold/20 bg-ram-gold/5 px-6 py-2 rounded-full">
-            <span class="text-ram-gold text-xs font-bold tracking-[0.2em] uppercase">Visual Excellence</span>
-        </div>
-        <h1 class="reveal-up text-6xl md:text-8xl font-heading font-bold uppercase tracking-tighter mb-4">
-            Project <span class="text-transparent bg-clip-text bg-gradient-to-r from-ram-gold via-yellow-200 to-ram-gold">Gallery</span>
-        </h1>
-        <p class="reveal-up text-gray-400 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed">
-            A visual record of luxury remodeling, structural integrity, and architectural restoration across the San Gabriel Valley.
-        </p>
+    <header class="page-hero wrap">
+        <p class="eyebrow">Portfolio</p>
+        <h1>The work, up close.</h1>
+        <p>Luxury remodeling, structure, and restoration across the San Gabriel Valley.</p>
     </header>
 
-    <main class="relative z-10 container mx-auto px-6 pb-32 flex-grow">
-        <div id="gallery-container" class="masonry-grid">
-            </div>
-
-        <div class="text-center mt-16 reveal-up">
-            <button id="load-more-btn" class="inline-flex items-center gap-3 border border-ram-gold text-ram-gold px-10 py-4 font-heading text-xl font-bold uppercase tracking-widest rounded-sm transition-all hover:bg-ram-gold hover:text-ram-navy hover:shadow-glow">
-                Load More Work <i class="fa-solid fa-angle-down"></i>
-            </button>
+    <main class="wrap" style="position:relative;z-index:1;padding-bottom:3rem">
+        <div id="gallery-container" class="gallery"></div>
+        <div class="actions" style="justify-content:center;margin-top:1.5rem">
+            <button id="load-more-btn" class="btn btn-ghost" type="button">Load more work</button>
         </div>
     </main>
 
@@ -229,7 +208,7 @@
             nextBatch.forEach((imgUrl, i) => {
                 const card = document.createElement('div');
                 // Added opacity-0 and translate-y-4 for a smooth slide-in animation when they mount
-                card.className = "gallery-card relative overflow-hidden rounded-lg border border-white/5 bg-ram-navy/20 cursor-zoom-in opacity-0 translate-y-4";
+                card.className = "gallery-card";
                 card.style.transition = `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${(i % 3) * 100}ms`;
                 
                 card.innerHTML = `

@@ -49,7 +49,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -144,200 +144,69 @@
             transform: translateY(-2px);
         }
     </style>
+    <link rel="stylesheet" href="/site.css">
 </head>
-<body class="bg-ram-dark text-white font-sans antialiased selection:bg-ram-gold selection:text-ram-navy flex flex-col min-h-screen relative overflow-x-hidden">
-    
-    <div class="fixed inset-0 bg-noise opacity-40 pointer-events-none z-0"></div>
-
+<body>
     <div id="global-nav"></div>
     <script src="nav.js"></script>
 
-    <header class="relative z-10 pt-48 pb-12 text-center">
-        <div class="container mx-auto px-6">
-            <div class="mb-16 reveal-up">
-                <div class="inline-block mb-4 border border-ram-gold/20 bg-ram-gold/5 px-6 py-2 rounded-full">
-                    <span class="text-ram-gold text-xs font-bold tracking-[0.2em] uppercase">Project Consultations</span>
-                </div>
-                <h1 class="text-6xl md:text-9xl font-heading font-bold mb-4 uppercase tracking-tight">
-                    Start Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-ram-gold via-yellow-200 to-ram-gold">Build</span>
-                </h1>
-                <p class="text-gray-400 max-w-xl mx-auto text-lg md:text-xl leading-relaxed font-light">
-                    Tell us about your project goals. Our master builders provide detailed project planning for homeowners in the San Gabriel Valley.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
-                <a href="tel:6266394749" class="js-tilt group bg-white/5 border border-white/10 p-10 rounded-xl hover:border-ram-gold/50 transition duration-500 backdrop-blur-sm shadow-2xl">
-                    <div class="w-16 h-16 bg-ram-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-ram-gold/20">
-                        <i class="fa-solid fa-phone text-2xl text-ram-gold group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h3 class="font-heading text-3xl text-white mb-2 uppercase">Call Us</h3>
-                    <p class="text-gray-400 font-sans group-hover:text-white transition">(626) 639-4749</p>
-                </a>
-
-                <a href="mailto:info@ram-contractor.com" class="js-tilt group bg-white/5 border border-white/10 p-10 rounded-xl hover:border-ram-gold/50 transition duration-500 backdrop-blur-sm shadow-2xl">
-                    <div class="w-16 h-16 bg-ram-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-ram-gold/20">
-                        <i class="fa-solid fa-envelope text-2xl text-ram-gold group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h3 class="font-heading text-3xl text-white mb-2 uppercase">Email Us</h3>
-                    <p class="text-gray-400 font-sans group-hover:text-white transition">info@ram-contractor.com</p>
-                </a>
-
-                <div class="js-tilt bg-white/5 border border-white/10 p-10 rounded-xl backdrop-blur-sm shadow-2xl">
-                    <div class="w-16 h-16 bg-ram-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-ram-gold/20">
-                        <i class="fa-solid fa-map-location-dot text-2xl text-ram-gold"></i>
-                    </div>
-                    <h3 class="font-heading text-3xl text-white mb-2 uppercase">Service Area</h3>
-                    <p class="text-gray-400 font-sans text-sm">Pasadena, San Marino, Altadena & SGV</p>
-                </div>
-            </div>
-
-            <div class="animate-bounce text-ram-gold opacity-80">
-                <p class="text-[10px] uppercase tracking-[0.4em] mb-2">Fill Out Inquiry Form</p>
-                <i class="fa-solid fa-chevron-down text-xl"></i>
-            </div>
-        </div>
+    <header class="page-hero wrap">
+        <p class="eyebrow">Services</p>
+        <h1>Master-builder work, scoped clearly.</h1>
+        <p>Kitchens, historic fabric, ADUs, structure, and outdoor rooms. One crew from permit to finish.</p>
     </header>
 
-    <main id="inquiry-form" class="relative z-10 flex-grow pb-32 scroll-mt-32">
-        <div class="container mx-auto px-6 max-w-3xl reveal-up">
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-16 backdrop-blur-md shadow-glow-strong">
-                
-                <form action="https://formsubmit.co/workorders@hpo.center" method="POST" class="custom-form space-y-8">
-                    <input type="hidden" name="_subject" value="URGENT: New Project Inquiry (RAM Construction)">
-                    <input type="text" name="_honey" style="display:none"> 
-                    <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="space-y-2">
-                            <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="First Name" required placeholder="Enter first name">
-                        </div>
-                        <div class="space-y-2">
-                            <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" name="Last Name" required placeholder="Enter last name">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="space-y-2">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="Email" required placeholder="name@email.com">
-                        </div>
-                        <div class="space-y-2">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="Phone" required placeholder="(626) ___ - ____">
-                        </div>
-                    </div>
-
-                    <div class="space-y-2">
-                        <label for="service">Specific Service Needed</label>
-                        <select id="service" name="Service Needed">
-                            <option value="General Inquiry">General Construction Inquiry</option>
-                            <option value="Kitchen Remodel">Luxury Kitchen Remodeling</option>
-                            <option value="Bathroom Remodel">Bathroom Renovation</option>
-                            <option value="Historic Restoration">Historic Preservation / Restoration</option>
-                            <option value="ADU / Addition">ADU / Room Addition</option>
-                            <option value="Foundation">Structural / Foundation Repair</option>
-                            <option value="Outdoor Living">Outdoor Living / BBQ Island</option>
-                        </select>
-                    </div>
-
-                    <div class="space-y-2">
-                        <label for="message">Project Details & Location *</label>
-                        <textarea id="message" name="Message" rows="6" required placeholder="Please describe your project goals, desired timeline, and the neighborhood your property is in..."></textarea>
-                    </div>
-
-                    <div class="pt-6">
-                        <button type="submit" class="shadow-glow transition-all active:scale-95">Send Inquiry</button>
-                    </div>
-                </form>
-
-            </div>
+    <main class="section" style="padding-top:1.5rem">
+        <div class="wrap service-list">
+            <article class="service-row">
+                <img src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/a2473262-7083-40e5-b740-598e5697f34e/IMG_3499.webp" alt="Finished entry remodel">
+                <div>
+                    <h2>Remodeling</h2>
+                    <p>High-end kitchen and bathroom transformations with custom tile, stone, and cabinetry. Built for daily use, not just the photograph.</p>
+                </div>
+                <a class="btn btn-ghost" href="/contact.html#inquiry-form">Plan this</a>
+            </article>
+            <article class="service-row">
+                <img src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/8bafc5f5-e090-40de-b431-98bd433fa2bb/IMG_3500.webp" alt="Historic stair restoration">
+                <div>
+                    <h2>Restoration</h2>
+                    <p>Stucco, millwork, and preserve-work for Pasadena bungalows. The original architecture stays in charge.</p>
+                </div>
+                <a class="btn btn-ghost" href="/contact.html#inquiry-form">Plan this</a>
+            </article>
+            <article class="service-row">
+                <img src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/d6560f3d-d3cf-44b2-9857-887a100ac8f8/IMG_3507.webp" alt="New framing on a residential addition">
+                <div>
+                    <h2>ADU builds</h2>
+                    <p>Detached garages become guest houses and rental suites. We handle the drawings path and the city permits.</p>
+                </div>
+                <a class="btn btn-ghost" href="/contact.html#inquiry-form">Plan this</a>
+            </article>
+            <article class="service-row">
+                <img src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/70622447-4fba-4287-ad54-cc3b1ddc5559/0D742970-8333-47BB-B2C8-26CB80007673.JPG" alt="Foundation rebar before concrete">
+                <div>
+                    <h2>Structure</h2>
+                    <p>Hillside foundations, reinforcements, and the hidden work that keeps an estate standing.</p>
+                </div>
+                <a class="btn btn-ghost" href="/contact.html#inquiry-form">Plan this</a>
+            </article>
+            <article class="service-row">
+                <img src="https://images.squarespace-cdn.com/content/v1/684480f262fb7703bd3fae23/d5dc4bf1-beb6-4e5d-91ef-52a791febcd6/IMG_3506.jpg" alt="Residential exterior under construction">
+                <div>
+                    <h2>Outdoor living</h2>
+                    <p>BBQ islands, masonry fire pits, and hardscape made for Pasadena evenings.</p>
+                </div>
+                <a class="btn btn-ghost" href="/contact.html#inquiry-form">Plan this</a>
+            </article>
         </div>
     </main>
 
-    <footer class="bg-ram-dark border-t-4 border-ram-gold pt-24 pb-12 text-gray-300 font-sans antialiased relative z-10 mt-auto">
-        <div class="w-full max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24 mb-20 text-center md:text-left">
-                
-                <div>
-                    <h4 class="text-4xl font-heading font-bold text-white mb-8 flex items-center justify-center md:justify-start leading-none tracking-wider">
-                        <span class="text-ram-gold mr-3 text-3xl">📍</span> RAM Construction
-                    </h4>
-                    <p class="mb-8 leading-relaxed text-sm font-light">
-                        The San Gabriel Valley’s definitive general contractor for complex structural engineering, luxury remodeling, and faithful historic restorations.
-                    </p>
-                    <div class="space-y-4 text-sm">
-                        <p class="flex items-center justify-center md:justify-start gap-3"><strong class="text-white uppercase tracking-widest text-[10px]">Office:</strong> <a href="tel:+16266394749" class="hover:text-ram-gold transition">(626) 639-4749</a></p>
-                        <p class="flex items-center justify-center md:justify-start gap-3"><strong class="text-white uppercase tracking-widest text-[10px]">Support:</strong> <a href="mailto:info@ram-contractor.com" class="hover:text-ram-gold transition font-medium">info@ram-contractor.com</a></p>
-                        <p class="flex items-center justify-center md:justify-start gap-3"><strong class="text-white uppercase tracking-widest text-[10px]">Hours:</strong> <span>Mon–Sat: 8:00 AM – 5:00 PM</span></p>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-2xl font-heading font-bold text-white mb-8 border-b border-white/10 pb-3 inline-block leading-none uppercase tracking-widest">
-                        Core Expertise
-                    </h4>
-                    <ul class="space-y-4 text-xs font-bold uppercase tracking-[0.15em] list-none pl-0 m-0 text-gray-400">
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fa-solid fa-hammer text-ram-gold text-[10px]"></i> Kitchen & Bath Remodeling</li>
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fa-solid fa-hammer text-ram-gold text-[10px]"></i> Historic Restorations</li>
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fa-solid fa-hammer text-ram-gold text-[10px]"></i> Pasadena ADU Specialists</li>
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fa-solid fa-hammer text-ram-gold text-[10px]"></i> Foundation & Structural</li>
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fa-solid fa-hammer text-ram-gold text-[10px]"></i> Outdoor Living Kitchens</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-2xl font-heading font-bold text-white mb-8 border-b border-white/10 pb-3 inline-block uppercase tracking-widest">
-                        Quick Access
-                    </h4>
-                    <ul class="space-y-5 text-sm font-medium list-none pl-0 m-0">
-                        <li><a href="/index.html" class="hover:text-ram-gold transition flex items-center justify-center md:justify-start gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] text-ram-gold group-hover:translate-x-1 transition"></i> Home</a></li>
-                        <li><a href="/services.html" class="hover:text-ram-gold transition flex items-center justify-center md:justify-start gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] text-ram-gold group-hover:translate-x-1 transition"></i> Our Services</a></li>
-                        <li><a href="#inquiry-form" class="text-ram-gold transition flex items-center justify-center md:justify-start gap-2 group font-bold underline decoration-ram-gold/30">Request a Free Estimate</a></li>
-                        <li><a href="https://g.co/kgs/sjeJGdg" target="_blank" class="hover:text-ram-gold transition flex items-center justify-center md:justify-start gap-2 group"><i class="fa-brands fa-google text-[10px] text-ram-gold"></i> Google Business Profile</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-white/10 pt-10 text-center">
-                <p class="text-[10px] text-gray-500 mb-4 uppercase tracking-[0.3em]">
-                    &copy; 2026 RAM Construction. Licensed & Insured. Pasadena, CA.
-                </p>
-                <p class="text-xs text-gray-600">
-                    Website Engineering by <a href="https://www.hpo.center" target="_blank" class="text-gray-400 hover:text-ram-gold transition font-bold">HPO.Center</a>
-                </p>
-            </div>
+    <section class="cta-band">
+        <div>
+            <h2>Tell us the house.</h2>
+            <p>Pasadena, San Marino, Altadena, and the rest of the San Gabriel Valley.</p>
         </div>
-    </footer>
-
-    <script>
-        // Reveal Animations
-        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    obs.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
-
-        // Tilt Effect
-        document.querySelectorAll('.js-tilt').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-                card.style.transform = `perspective(1000px) rotateX(${y / -10}deg) rotateY(${x / 10}deg)`;
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = `perspective(1000px) rotateX(0) rotateY(0)`;
-                card.style.transition = 'transform 0.5s ease';
-            });
-        });
-    </script>
+        <a class="btn btn-gold" href="/contact.html#inquiry-form">Request an estimate</a>
+    </section>
 </body>
 </html>
