@@ -33,7 +33,7 @@ const menuContent = `
         <div class="ram-mobile-menu__foot">
             <a href="/contact.html#inquiry-form" class="ram-mobile-cta">Start your project</a>
             <a href="tel:+16266394749" class="ram-mobile-phone">(626) 639-4749</a>
-            <p>Licensed Pasadena contractor</p>
+            <p>Small projects in Pasadena</p>
         </div>
     </div>
 `;
@@ -44,8 +44,8 @@ const footerContent = `
             <div class="footer-identity">
                 <img class="footer-logo" src="/logo.png" alt="RAM General Construction">
                 <p class="footer-name">RAM Construction</p>
-                <p class="footer-role">General contractor in Pasadena.</p>
-                <p class="footer-areas">Pasadena, San Marino, Altadena, East Pasadena, South Pasadena, and the San Gabriel Valley.</p>
+                <p class="footer-role">Small residential projects in Pasadena.</p>
+                <p class="footer-areas">Larger or permit-required work is done with licensed partners.</p>
             </div>
             <div class="footer-contact">
                 <h2 class="footer-label">Contact</h2>
@@ -60,6 +60,7 @@ const footerContent = `
                     <li><a href="/services.html">Services</a></li>
                     <li><a href="/portfolio.html">Portfolio</a></li>
                     <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/areas/pasadena.html">Pasadena</a></li>
                     <li><a href="tel:+16266394749">Call (626) 639-4749</a></li>
                     <li><a href="https://g.co/kgs/sjeJGdg" target="_blank" rel="noopener">Google profile</a></li>
                 </ul>

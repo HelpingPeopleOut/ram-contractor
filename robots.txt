@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+Allow: /areas/
+Allow: /geo/
+Allow: /llms.txt
+Allow: /llms.json
 Disallow: /thanks.html
 
-Sitemap: https://www.ram-contractor.com/sitemap.xml
+Sitemap: https://ram-contractor.com/sitemap.xml
