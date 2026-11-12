@@ -50,6 +50,7 @@ const footerContent = `
             <div class="footer-contact">
                 <h2 class="footer-label">Contact</h2>
                 <a class="footer-phone" href="tel:+16266394749">(626) 639-4749</a>
+                <a class="footer-direct" href="tel:+16265370090"><span>Direct</span> (626) 537-0090</a>
                 <a class="footer-mail" href="mailto:info@ram-contractor.com">info@ram-contractor.com</a>
                 <p class="footer-hours">Mon–Sat 8:00 AM–5:00 PM</p>
             </div>
